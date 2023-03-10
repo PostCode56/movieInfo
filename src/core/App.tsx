@@ -6,7 +6,7 @@ const App: FC = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Main/>}/>
+                <Route path="/movieInfo" element={<Main/>}/>
                 <Route path="/info/:id" element={<InfoCardMovie/>}/>
                 <Route path='/*' element={<Error/>}/>
             </Routes>
