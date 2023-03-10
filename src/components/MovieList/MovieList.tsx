@@ -17,7 +17,7 @@ export const MovieList: FC = () => {
                     {movies.map(res => (
                         <StyledCard key={res.id}>
                             <Link
-                                style={{textDecoration: "none"}}
+                                style={{textDecoration: "none", color:"black"}}
                                 to={`/info/${res.id}`}
                                 key={res.id}
                                 onClick={() => fetchInfo(res.id, dispatch)}>
