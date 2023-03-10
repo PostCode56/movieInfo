@@ -57,37 +57,37 @@ export const StyledImg = styled.img`
   }
 `
 export const StyledTitle = styled.div`
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   font-family: Bahnschrift;
   border-bottom: 1px solid gray;
 `
 export const StyledCountry = styled.div`
-  font-size: 28px;
+  font-size: 24px;
   font-family: Bahnschrift;
   margin: 10px 0;
   color: gray;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `
 export const StyledText = styled.div`
-  font-size: 28px;
+  font-size: 24px;
   font-family: Bahnschrift;
   margin: 20px 0;
   color: gray;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `
 export const StyledTextGenre = styled.div`
-  font-size: 28px;
+  font-size: 24px;
   font-family: Bahnschrift;
   margin: 10px 0;
   padding-right: 5px;
   text-transform: uppercase;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `
 export const StyledGenre = styled.div`
