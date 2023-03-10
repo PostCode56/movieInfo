@@ -87,7 +87,7 @@ export const StyledTextGenre = styled.div`
   padding-right: 5px;
   text-transform: uppercase;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 `
 export const StyledGenre = styled.div`
@@ -95,12 +95,12 @@ export const StyledGenre = styled.div`
   display: flex;
 `
 export const StyledOverview = styled.div`
-  font-size: 30px;
+  font-size: 24px;
   font-family: Bahnschrift;
   flex-wrap: wrap;
   margin: 15px 0;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `
 export const StyledTagline = styled.div`
