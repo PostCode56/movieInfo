@@ -11,7 +11,7 @@ export const MovieCardHeader: FC = () => {
                     <StyledItems>
                         <StyledItemsContainer>
                             <Link
-                                to="/">
+                                to="/movieInfo">
                                 <StyledImg src={back}/>
                             </Link>
                         </StyledItemsContainer>
