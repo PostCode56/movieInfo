@@ -21,6 +21,9 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "src/assets/index.d.ts",
+    "src/redux/types/typesUsers.d.ts",
+    "src/redux/types/typesInfo.d.ts"
   ]
 }
