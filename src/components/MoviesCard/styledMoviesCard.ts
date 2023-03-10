@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const StyledSection = styled.section`
   width: 100%;
   margin: 0 auto;
-  @media (min-width: 250px) and (max-width: 925px) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
 `
 export const StyledContainer = styled.div`
   width: 90%;

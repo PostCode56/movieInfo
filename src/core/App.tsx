@@ -4,9 +4,9 @@ import {Error, Main, InfoCardMovie} from "../components";
 
 const App: FC = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/movieInfo">
             <Routes>
-                <Route path="/movieInfo" element={<Main/>}/>
+                <Route path="/" element={<Main/>}/>
                 <Route path="/info/:id" element={<InfoCardMovie/>}/>
                 <Route path='/*' element={<Error/>}/>
             </Routes>
