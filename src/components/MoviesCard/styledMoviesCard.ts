@@ -3,20 +3,25 @@ import styled from "styled-components";
 export const StyledSection = styled.section`
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 export const StyledContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media (min-width: 250px) and (max-width: 925px) {
+    width: 90%;
+  }
 `
-export const StyledItem = styled.div`
+export const StyledItemImg = styled.div`
   width: 28%;
   margin-top: 40px;
-  text-align: right;
+  text-align: left;
+  -webkit-filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(5px 5px 5px #000000);
   @media (min-width: 1251px) and (max-width: 2000px) {
     width: 35%
   }
@@ -27,7 +32,7 @@ export const StyledItem = styled.div`
   }
 `
 export const StyledInfoItem = styled.div`
-  width: 67%;
+  width: 50%;
   margin-top: 40px;
   margin-left: 25px;
   text-align: left;
@@ -39,21 +44,13 @@ export const StyledInfoItem = styled.div`
   }
 `
 export const StyledImg = styled.img`
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  &:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  @media (min-width: 250px) and (max-width: 925px) {
+  @media (min-width: 281px) and (max-width: 725px) {
     width: 280px;
     height: 380px;
+  }
+  @media (min-width: 0px) and (max-width: 280px) {
+    width: 220px;
+    height: 320px;
   }
 `
 export const StyledTitle = styled.div`
@@ -61,6 +58,8 @@ export const StyledTitle = styled.div`
   font-weight: bold;
   font-family: Bahnschrift;
   border-bottom: 1px solid gray;
+  -webkit-filter: drop-shadow(5px 5px 5px #9a9a9a);
+  filter: drop-shadow(5px 5px 5px #9a9a9a);
 `
 export const StyledCountry = styled.div`
   font-size: 24px;
@@ -108,4 +107,16 @@ export const StyledTagline = styled.div`
   font-family: Bahnschrift;
   margin: 30px 0;
   border-bottom: 1px solid gray;
+`
+export const StyledImgFavorite = styled.img`
+  width: 70px;
+  height: 90px;
+  position: absolute;
+  cursor: cell;
+  -webkit-filter: drop-shadow(5px 5px 5px #ffffff);
+  filter: drop-shadow(5px 5px 5px #ffffff);
+  @media (min-width: 250px) and (max-width: 725px) {
+    width: 50px;
+    height: 70px;
+  }
 `

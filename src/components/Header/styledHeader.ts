@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledSection = styled.section`
   width: 100%;
-  height: 100px;
+  height: 130px;
   margin: 0 auto;
   background: black;
   color: white;
@@ -11,7 +11,7 @@ export const StyledSection = styled.section`
   }
 `
 export const StyledContainer = styled.div`
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 `
 export const StyledItems = styled.div`
@@ -22,22 +22,24 @@ export const StyledItems = styled.div`
 `
 export const StyledItemsContainer = styled.div`
   width: 50%;
+  padding-left: 20px;
   display: flex;
   justify-content: space-between;
   margin-top: 35px;
   @media (min-width: 250px) and (max-width: 925px) {
     width: 100%;
+    margin: 0 auto;
+    padding-left: 0px;
   }
 `
 export const StyledInputContainer = styled.div`
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
   margin-top: 35px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
-
   &:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -47,19 +49,24 @@ export const StyledInputContainer = styled.div`
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-
   @media (min-width: 250px) and (max-width: 925px) {
     width: 100%;
+    margin: 10px auto;
   }
-
 `
 export const StyledLogo = styled.div`
+  width: 15%;
   font-size: 28px;
+  margin-top: 48px;
   font-family: Bahnschrift;
   text-align: center;
   color: cornflowerblue;
+  -webkit-filter: drop-shadow(5px 5px 5px #004ff3);
+  filter: drop-shadow(5px 5px 5px #004ff3);
   @media (min-width: 250px) and (max-width: 925px) {
+    width: auto;
     font-size: 22px;
+    margin-top: 20px;
   }
 `
 export const StyledLink = styled.button`
@@ -71,7 +78,6 @@ export const StyledLink = styled.button`
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
-
   &:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -81,9 +87,8 @@ export const StyledLink = styled.button`
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-
   @media (min-width: 250px) and (max-width: 925px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `
 

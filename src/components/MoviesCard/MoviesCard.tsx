@@ -1,27 +1,37 @@
 import React, {FC} from 'react';
 import {
     StyledContainer, StyledCountry, StyledGenre,
-    StyledImg,
+    StyledImg, StyledImgFavorite,
     StyledInfoItem,
-    StyledItem, StyledOverview,
+    StyledItemImg, StyledOverview,
     StyledSection, StyledTagline, StyledText, StyledTextGenre,
     StyledTitle
 } from "./styledMoviesCard";
-import {useAppSelector} from "../../redux/hooks/hooks";
-import {imgBasic} from "../../utils/fetchMoviesLink";
+import {useAppDispatch, useAppSelector} from "../../redux/hooks/hooks";
+import {imgBasic} from "../../redux/api/api";
 import {numberWithSpacesBudget, numberWithSpacesRevenue} from "../../utils/numberSpaces";
+import {addFavorite} from "../../assets/images";
+import {addFavoriteList} from "../../utils/addFavoriteList";
+import {ModalWindow} from "../index";
 
 export const MoviesCard: FC = () => {
     const info = useAppSelector(state => state.movieReducer.info)
-    const budget = useAppSelector(state => state.movieReducer.info.budget)
-    const revenue = useAppSelector(state => state.movieReducer.info.revenue)
+    const movies = useAppSelector(state => state.movieReducer.movies.results)
+    const arrayFavorite = useAppSelector(state => state.movieReducer.favorite)
     const genre = useAppSelector(state => state.movieReducer.info.genres)
+    const modalActive = useAppSelector(state => state.movieReducer.modalActive)
+    const dispatch = useAppDispatch();
     return (
         <StyledSection>
             <StyledContainer>
-                <StyledItem>
+                <StyledItemImg>
+                    <StyledImgFavorite
+                        src={addFavorite}
+                        onClick={
+                            () => addFavoriteList(info.id, movies, arrayFavorite, dispatch)}
+                    />
                     <StyledImg src={imgBasic + info.poster_path}/>
-                </StyledItem>
+                </StyledItemImg>
                 <StyledInfoItem>
                     <StyledTitle>{info.title}</StyledTitle>
                     <StyledGenre>
@@ -33,16 +43,19 @@ export const MoviesCard: FC = () => {
                         ))}
                     </StyledGenre>
                     <StyledCountry>Original language {info.original_language}</StyledCountry>
-                    <StyledText>Budget: {numberWithSpacesBudget(budget)}$</StyledText>
+                    <StyledText>Budget: {numberWithSpacesBudget(info.budget)}$</StyledText>
                     <StyledText>Popularity: {Math.round(info.popularity)}</StyledText>
                     <StyledText>Release date: {info.release_date}</StyledText>
-                    <StyledText>Revenue: {numberWithSpacesRevenue(revenue)}$</StyledText>
+                    <StyledText>Revenue: {numberWithSpacesRevenue(info.revenue)}$</StyledText>
                     <StyledText>Status: {info.status}</StyledText>
                     <StyledText>Runtime: {info.runtime} minutes</StyledText>
                     <StyledTagline>{info.tagline}</StyledTagline>
                     <StyledOverview>{info.overview}</StyledOverview>
                 </StyledInfoItem>
             </StyledContainer>
+            {modalActive
+                ? <ModalWindow/>
+                : <></>}
         </StyledSection>
     );
 };

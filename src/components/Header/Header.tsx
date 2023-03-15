@@ -5,11 +5,11 @@ import {
     StyledItemsContainer,
     StyledLink,
     StyledLogo,
-    StyledSection
+    StyledSection,
 } from "./styledHeader";
 import {useAppDispatch} from "../../redux/hooks/hooks";
-import {getFetchMoviesLink} from "../../utils/fetchMoviesLink";
-import {Search} from "./Search/Search";
+import {getFetchMoviesLink} from "../../redux/api/api";
+import {Search,FavoriteLink} from "../index";
 
 export const Header: FC = () => {
     const dispatch = useAppDispatch();
@@ -17,13 +17,12 @@ export const Header: FC = () => {
     const fetchMovie = (value: string, dispatch: any) => {
         getFetchMoviesLink(value, dispatch)
     }
-
     return (
         <StyledSection>
             <StyledContainer>
                 <StyledItems>
+                    <StyledLogo>INFOMovie</StyledLogo>
                     <StyledItemsContainer>
-                        <StyledLogo>INFOMovie</StyledLogo>
                         {arrayLink.map(value => (
                             <StyledLink
                                 key={value}
@@ -32,6 +31,7 @@ export const Header: FC = () => {
                             >{value}
                             </StyledLink>
                         ))}
+                        <FavoriteLink/>
                     </StyledItemsContainer>
                     <StyledInputContainer>
                         <Search/>

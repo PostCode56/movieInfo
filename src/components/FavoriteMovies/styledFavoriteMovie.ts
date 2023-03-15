@@ -18,10 +18,6 @@ export const StyledCard = styled.div`
   transition: all 0.5s ease;
   -webkit-filter: drop-shadow(5px 5px 5px #000000);
   filter: drop-shadow(5px 5px 5px #000000);
-  @media (min-width: 250px) and (max-width: 280px) {
-    width: 200px;
-  }
-
   &:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -35,22 +31,30 @@ export const StyledCard = styled.div`
 export const StyledImg = styled.img`
   width: 280px;
   height: 380px;
-  @media (min-width: 250px) and (max-width: 280px) {
-    width: 200px;
-    height: 300px;
-  }
 `
-export const StyledImgFavorite = styled.img`
-  width: 50px;
-  height: 70px;
-  position: absolute;
-  cursor: cell;
-  -webkit-filter: drop-shadow(5px 5px 5px #ffffff);
-  filter: drop-shadow(10px 10px 10px #ffffff);
-`
-export const StyledTitle = styled.div`
+export const StyledTitleCard = styled.div`
   text-align: center;
   font-size: 18px;
   font-family: Bahnschrift;
   padding-top: 5px;
+`
+export const StyledTitle = styled.div`
+  width: 25%;
+  margin: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Bahnschrift;
+  @media (min-width: 250px) and (max-width: 925px) {
+    width: auto;
+    font-size: 18px;
+  }
+`
+export const StyledImgDelete = styled.img`
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(5px 5px 5px #ffffff);
+  filter: drop-shadow(10px 10px 10px #ffffff);
 `

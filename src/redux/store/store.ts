@@ -22,7 +22,7 @@ export const setupStore = () => {
 }
 export const stores = createStore(persistedReducer, applyMiddleware(sagaMiddleware))
 export const persister = persistStore(stores)
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof persistedReducer>
 export type AppStore = ReturnType<typeof setupStore>
 export type AppDispatch = AppStore['dispatch']
 sagaMiddleware.run(rootWatcher);

@@ -1,16 +1,16 @@
 import React, {FC, useEffect} from 'react';
-import {Header} from "../Header/Header";
+import {Header,ScreenSaver} from "../index";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks/hooks";
-import {ScreenSaver} from "../../utils/screenSaver";
-import {getFetchMovie} from "../../redux/reducer/movieReducer";
+import {fetchMovieSaga} from "../../redux/api/api";
 
 export const Main: FC = () => {
     const loading = useAppSelector(state => state.movieReducer.isLoading)
+    const movie = useAppSelector(state => state.movieReducer.movies)
     const error = useAppSelector(state => state.movieReducer.error)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        dispatch(getFetchMovie())
+        fetchMovieSaga(movie,dispatch)
     }, [])
 
     return (
