@@ -69,7 +69,7 @@ export const StyledTitle = styled.div`
   font-size: 22px;
   padding-top: 10px;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `
 export const StyledText = styled.div`
