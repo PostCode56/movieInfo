@@ -6,7 +6,7 @@ export const StyledSection = styled.section`
   margin-bottom: 100px;
 `
 export const StyledContainer = styled.div`
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
@@ -32,7 +32,7 @@ export const StyledItemImg = styled.div`
   }
 `
 export const StyledInfoItem = styled.div`
-  width: 50%;
+  width: 60%;
   margin-top: 40px;
   margin-left: 25px;
   text-align: left;
