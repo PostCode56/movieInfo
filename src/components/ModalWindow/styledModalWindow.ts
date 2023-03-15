@@ -76,6 +76,6 @@ export const StyledText = styled.div`
   font-size: 22px;
   padding-top: 10px;
   @media (min-width: 250px) and (max-width: 725px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `
