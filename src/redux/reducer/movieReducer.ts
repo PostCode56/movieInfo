@@ -91,7 +91,7 @@ export const movieSlice = createSlice({
         },
         successFetchInfo(state, action: PayloadAction<TypesInfo.RootType>) {
             state.isLoading = false;
-            state.modalActive = true;
+            state.modalActive = false;
             state.info = action.payload;
         },
         successModalInfo(state, action: PayloadAction<TypesInfo.RootType>) {
