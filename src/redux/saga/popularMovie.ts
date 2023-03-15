@@ -12,13 +12,14 @@ function* workerFetchMoviePopularFetch(): unknown {
         yield delay(600)
         const response = yield call(getPopularMovie)
         yield put(successFetchMovie(response.data))
+        console.log("dfg")
     } catch (e) {
         yield put(fetchErrorMovie)
     }
 }
 
 export function* moviePopularWatcher() {
-    yield takeEvery('movie/getFetchMovie', workerFetchMoviePopularFetch)
+    yield takeEvery('movie/fetchMovie', workerFetchMoviePopularFetch)
 }
 
 
