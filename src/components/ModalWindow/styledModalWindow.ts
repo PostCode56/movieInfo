@@ -9,6 +9,9 @@ export const StyledSection = styled.section`
   bottom: 0;
   display: flex;
   justify-content: right;
+  @media (min-width: 250px) and (max-width: 725px) {
+    height: 250px;
+  }
 `
 export const StyledContainer = styled.div`
   width: 30%;
