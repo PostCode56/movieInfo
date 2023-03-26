@@ -1,15 +1,15 @@
 import React, {FC} from 'react';
-import {MovieCardHeader, Loader, FavoriteMovie} from "../index";
-import {useAppSelector} from "../../redux/hooks/hooks";
+import {MovieCardHeader,MoviesCard,Loader} from "../components";
+import {useAppSelector} from "../redux/hooks/hooks";
 
-export const FavoriteMoviePage: FC = () => {
+export const InfoCardMovie: FC = () => {
     const isLoading = useAppSelector(state => state.movieReducer.isLoading)
     return (
         <>
             <MovieCardHeader/>
             {isLoading
                 ? <Loader/>
-                : <FavoriteMovie/>
+                : <MoviesCard/>
             }
         </>
     );

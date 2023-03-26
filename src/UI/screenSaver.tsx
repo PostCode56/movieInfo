@@ -1,4 +1,4 @@
-import {Loader, Error, MovieList} from "../index";
+import {Loader, Error, MovieList} from "../components";
 import React, {FC} from "react";
 
 interface ILoad {
